@@ -11,7 +11,7 @@ setuptools.setup(
     description="获取Jetbrains激活码",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/PepperPapa/xinNotes",
+    url="https://github.com/PeterPuffer/puffidea",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
