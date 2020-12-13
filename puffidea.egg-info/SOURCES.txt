@@ -1,0 +1,8 @@
+README.md
+setup.py
+idea/__init__.py
+idea/code.py
+puffidea.egg-info/PKG-INFO
+puffidea.egg-info/SOURCES.txt
+puffidea.egg-info/dependency_links.txt
+puffidea.egg-info/top_level.txt

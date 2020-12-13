@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: puffidea
+Version: 0.0.2
+Summary: 获取Jetbrains激活码
+Home-page: https://github.com/PeterPuffer/puffidea
+Author: puff
+Author-email: angrypuff333@gmail.com
+License: UNKNOWN
+Description: # 获取Jetbrains激活码
+        
+        ##### 使用方式 ```python -m idea.code -n```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
