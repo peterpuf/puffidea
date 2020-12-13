@@ -1,7 +1,10 @@
+# coding=utf-8
+
 import requests
 import re
 import zipfile
 import tempfile
+import sys
 
 
 class Main(object):
@@ -15,7 +18,8 @@ class Main(object):
         """
         url = 'http://idea.medeming.com/jets/'
         res = self.session.get(url)
-        res.encoding = 'utf-8'
+        if sys.version.split(".")[0] == "3":
+            res.encoding = 'utf-8'
         if res.status_code == 200:
             d_url = "http://idea.medeming.com/jets/" + re.findall('<a href="(\S+)".*?="激活码.zip">点击下', res.text)[0]
             d_res = requests.get(d_url)
