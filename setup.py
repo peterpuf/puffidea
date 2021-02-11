@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="puffidea",
-    version="0.0.3",
+    version="0.0.5",
     author="puff",
     author_email="angrypuff333@gmail.com",
     description="获取Jetbrains激活码",

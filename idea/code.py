@@ -30,7 +30,7 @@ class Main(object):
 
     def parse_zip(self):
         zip_res = self.get_zip()
-        ret = {"2017": "", "2018": ""}
+        rets = {"2017": "", "2018": ""}
         # 临时文件保存zip, 这样当上下文关闭时文件会自动删除
         with tempfile.TemporaryFile() as tmp_file:
             tmp_file.write(zip_res.content)
@@ -46,14 +46,19 @@ class Main(object):
                 with s.open(each, 'r') as code:
                     x = code.read()
                     if str(each).startswith("2018"):
-                        ret['2018'] = bytes.decode(x)
+                        rets['2018'] = bytes.decode(x)
                     else:
-                        ret['2017'] = bytes.decode(x)
+                        rets['2017'] = bytes.decode(x)
 
-        return ret
+        return rets
 
     def run(self):
         return self.parse_zip()
+
+    def get_from_new(self):
+        url = "http://idea.94goo.com/key"
+        res = self.session.get(url)
+        return re.findall('class="new-key" value="(.*?)">', res.text)[0]
 
 
 if __name__ == '__main__':
@@ -62,6 +67,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-n', help="2018版之后的激活码", action="store_true")
     parser.add_argument('-o', help="2017年之前的激活码", action="store_true")
+    parser.add_argument('-x', help="最新的激活码", action="store_true")
     args = parser.parse_args()
     ret = Main().run()
     if args.n:
@@ -70,5 +76,7 @@ if __name__ == '__main__':
     if args.o:
         print(ret['2017'])
         exit()
+    if args.x:
+        print(Main().get_from_new())
+        exit()
     print(ret['2018'])
-
