@@ -15,7 +15,7 @@ class Main(object):
         下载激活码文件,
         :return:
         """
-        url = "http://idea.medeming.com/a/jihuoma1.zip"
+        url = "http://idea.medeming.com/a/jihuoma3.zip"
         res = requests.get(url)
         return res
 
@@ -46,11 +46,6 @@ class Main(object):
     def run(self):
         return self.parse_zip()
 
-    def get_from_new(self):
-        url = "http://idea.94goo.com/key"
-        res = self.session.get(url)
-        return re.findall('class="new-key" value="(.*?)">', res.text)[0]
-
 
 if __name__ == '__main__':
     import argparse
@@ -58,7 +53,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-n', help="2018.2之后的激活码", action="store_true")
     parser.add_argument('-o', help="2018.1之前的激活码", action="store_true")
-    parser.add_argument('-x', help="最新的激活码", action="store_true")
     args = parser.parse_args()
     ret = Main().run()
     if args.n:
@@ -66,8 +60,5 @@ if __name__ == '__main__':
         exit()
     if args.o:
         print(ret['2019'])
-        exit()
-    if args.x:
-        print(Main().get_from_new())
         exit()
     print(ret['2019'])
