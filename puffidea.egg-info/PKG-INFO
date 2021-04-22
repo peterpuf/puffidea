@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: puffidea
+Version: 0.0.7
+Summary: 获取Jetbrains激活码
+Home-page: https://github.com/PeterPuffer/puffidea
+Author: puff
+Author-email: angrypuff333@gmail.com
+License: UNKNOWN
+Description: # 获取Jetbrains激活码
+        
+        ### 安装方式 
+        ```pip install puffidea```
+        <br />
+        
+        Or
+        <br /> 
+        
+        ```pip3 install puffieda```
+        
+        <br />
+        
+        ### 使用方式 
+        ```python -m idea.code -h```
+        
+        Or
+        <br /> 
+        
+        ```python3 -m idea.code -h```
+        
+        <br />
+        
+        ### 构建方式:
+        ##### ```python setup.py sdist bdist_wheel```
+        ##### ```twine upload dist/*```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
