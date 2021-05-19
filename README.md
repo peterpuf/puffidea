@@ -29,4 +29,4 @@ Or
 ##### ```twine upload dist/*```
 
 ### 公众号(更新自动推送)
-![MagicPuff](https://github.com/PeterPuffer/puffidea/tree/master/img/wx_qrcode.jpg)
+![MagicPuff](https://github.com/PeterPuffer/puffidea/blob/master/img/wx_qrcode.jpg)
