@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: puffidea
-Version: 0.0.7
+Version: 0.1.2
 Summary: 获取Jetbrains激活码
 Home-page: https://github.com/PeterPuffer/puffidea
 Author: puff
@@ -20,18 +20,24 @@ Description: # 获取Jetbrains激活码
         <br />
         
         ### 使用方式 
-        ```python -m idea.code -h```
+        ```python -m idea.code``` <br />
+        ```python -m pycharm.code``` <br />
+        ```python -m webstorm.code```
         
         Or
         <br /> 
         
-        ```python3 -m idea.code -h```
-        
+        ```python3 -m idea.code``` <br />
+        ```python -m pycharm.code``` <br />
+        ```python -m webstorm.code```
         <br />
         
         ### 构建方式:
         ##### ```python setup.py sdist bdist_wheel```
         ##### ```twine upload dist/*```
+        
+        ### 公众号(更新自动推送)
+        ![MagicPuff](https://github.com/PeterPuffer/puffidea/blob/master/img/wx_qrcode.jpg)
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 2
 Classifier: License :: OSI Approved :: MIT License

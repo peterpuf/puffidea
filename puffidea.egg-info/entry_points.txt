@@ -1,0 +1,3 @@
+[console_scripts]
+jtc = idea:main
+
