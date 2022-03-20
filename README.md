@@ -12,17 +12,7 @@ Or
 <br />
 
 ### 使用方式 
-```python -m idea.code``` <br />
-```python -m pycharm.code``` <br />
-```python -m webstorm.code```
-
-Or
-<br /> 
-
-```python3 -m idea.code``` <br />
-```python -m pycharm.code``` <br />
-```python -m webstorm.code```
-<br />
+```jtc``` (jetbrain code)<br />
 
 ### 构建方式:
 ##### ```python setup.py sdist bdist_wheel```

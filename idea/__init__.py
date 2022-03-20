@@ -49,6 +49,21 @@ def main():
     else:
         print("获取失败, 开始切换获取源重新尝试~")
 
+    # 获取D1
+    print("切换激活码~")
+    D = c.Main().get_D()
+    if D != "" and D is not None:
+        set_clipboard(D)
+        signal.signal(signal.SIGALRM, interrupted)
+        signal.alarm(15)
+        try:
+            input('已赋值到剪贴板, 若本激活码不可用, 需要换另一个激活码, 回车即可. (15s后自动退出)   [code from: https://www.ajihuo.com/pycharm/4197.html]')
+        except InputTimeoutError:
+            exit(0)
+        signal.alarm(0)
+    else:
+        print("获取失败, 开始切换获取源重新尝试~")
+
     # 获取C2的
     print("切换激活码~")
     C = c.Main().get_C(2)
